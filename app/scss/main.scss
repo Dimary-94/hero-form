@@ -1,38 +1,37 @@
 @import "vars";
 @import "fonts";
 
-
-::placeholder {
-	color: #666;
+* {
+	margin: 0;
+	padding: 0;
 }
-
-::selection {
-	background-color: $accent;
-	color: #fff;
+  
+li {
+	list-style-type: none;
+}
+  
+a {
+	text-decoration: none;
+	color: #ffffff;
+}
+  
+a:hover {
+	color: #ccc;
+}
+  
+img {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	max-width: 100%;
 }
 
 body {
 	font-size: 16px;
-	min-width: 320px;
-	position: relative;
-	line-height: 1.65;
+	line-height: 1.6;
 	font-family: $default-font;
 	overflow-x: hidden;
 	color: $text;
-
-	input,
-	textarea {
-		border: #666 1px solid;
-		outline: none;
-
-		&:focus:required:invalid {
-			border-color: red;
-		}
-
-		&:required:valid {
-			border-color: green;
-		}
-	}
 }
 
 .img-responsive {
@@ -45,11 +44,80 @@ body {
 	}
 }
 
-.text-center {
-	text-align: center;
+
+.container {
+	max-width: 1680px ;
+	margin: 0 auto;
+	width: 100%;
+	background-color: #fff;
 }
 
-b,
-strong {
-	font-weight: bold;
+.header_info {
+	display: flex;
+	justify-content: space-between;
+	.logo {
+		background-color: #7f43c3;
+		width: 428px;
+		height: 158px;
+		border: 1px solid #979797;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		& a {
+			color: #ffffff;
+			font-size: 45px;
+			font-weight: 400;
+			letter-spacing: 3.38px;
+		}
+	}
+	.time {
+		text-align: center;
+		padding: 50px 80px 0;
+		& p {
+			color: #000000;
+			font-size: 35px;
+			font-weight: 400;
+			letter-spacing: 2.63px;
+		}
+		& time {
+			color: #f29266;
+			font-size: 27px;
+			font-weight: 400;
+			letter-spacing: 2.03px;
+		}
+	}
 }
+
+.hero {
+	max-width: 1680px;
+	margin-top: 120px;
+	height: 765px;
+	background-image: url(../img/hero-1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	&_form {
+		position: absolute;
+		margin: 246px 270px;
+		padding: 100px;
+		max-width: 1140px;
+		height: 320px ;
+		background-color: #ffffff;
+		border-bottom: 1px solid #ececec;
+		& h1 {
+			color: #333333;
+			font-size: 75px;
+			letter-spacing: 5.63px;
+			font-weight: 700;
+			line-height: 90px;
+		}
+		& p {
+			color: #000000;
+			font-size: 30px;
+			font-weight: 400;
+			letter-spacing: 2.25px;
+			padding-top: 30px;
+			line-height: 40px;
+		}
+	}
+}
+
