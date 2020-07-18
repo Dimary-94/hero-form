@@ -26,6 +26,24 @@ img {
 	max-width: 100%;
 }
 
+input {
+	display: block;
+	border: solid 0.5px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	height: 48px;
+	padding-left: 15px;
+	color: #494848;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 0.1px;
+	border-radius: 5px;
+	outline: none;
+}
+input:focus {
+	border: 1px solid #7f43c3;
+}
+
+
 body {
 	font-size: 16px;
 	line-height: 1.6;
@@ -88,21 +106,33 @@ body {
 	}
 }
 
+.forms {
+	background-color: #f3f3f3;
+	.form {
+		display: grid;
+		grid-row-gap: 30px;
+	}
+}
+
 .hero {
 	max-width: 1680px;
 	margin-top: 120px;
-	height: 765px;
+	height: 654px;
 	background-image: url(../img/hero-1.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	&_form {
-		position: absolute;
-		margin: 246px 270px;
-		padding: 100px;
+	&_content {
 		max-width: 1140px;
-		height: 320px ;
+		margin: 0 auto;
+		padding-top: 246px;
+		display: grid;
+	}
+	&_title {
+		display: grid;
+		grid-row-gap: 27px;
+		max-width: 960px;
+    	padding: 80px 90px;
 		background-color: #ffffff;
-		border-bottom: 1px solid #ececec;
 		& h1 {
 			color: #333333;
 			font-size: 75px;
@@ -114,10 +144,38 @@ body {
 			color: #000000;
 			font-size: 30px;
 			font-weight: 400;
-			letter-spacing: 2.25px;
-			padding-top: 30px;
 			line-height: 40px;
 		}
 	}
+}
+
+
+.section-hero-form {
+	max-width: 1140px;
+	margin: 0 auto;
+	background-color: #fff;
+	& .form {
+		max-width: 812px;
+		margin: 0  auto;
+		padding-top: 50px;
+	}
+}
+
+
+.placehold_name {
+	width: 100%;
+	& div {
+		color: #333333;
+		font-size: 16px;
+		font-weight: 500;
+		letter-spacing: 0.11px;
+	}
+}
+
+
+.data-mail {
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
 }
 
